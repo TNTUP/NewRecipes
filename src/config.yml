@@ -1,0 +1,6 @@
+# NewRecipes's configuration file
+
+# Grass Block: shapeless, 1 Dirt + 1 Seed
+grass-block: true
+# Moss Stone: shapeless, 1 Cobblestone + 1 seed
+moss-stone: true
