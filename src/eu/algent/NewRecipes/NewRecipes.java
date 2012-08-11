@@ -9,7 +9,7 @@ public class NewRecipes extends JavaPlugin {
     public void onEnable() {
         // Check if config file exist
         if (!(new File(getDataFolder(), "config.yml").exists())) saveDefaultConfig();
-        // Init recipes
+        // Init
         new Recipes(this);
         getLogger().info(getName() + " has been enabled.");
     }
