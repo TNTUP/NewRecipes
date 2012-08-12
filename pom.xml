@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>eu.algent</groupId>
 	<artifactId>NewRecipes</artifactId>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.1</version>
 	<name>NewRecipes</name>
 	<url>https://github.com/Algent/NewRecipes</url>
 	<description>This bukkit plugin add recipes to the game for some existing blocks.</description>
