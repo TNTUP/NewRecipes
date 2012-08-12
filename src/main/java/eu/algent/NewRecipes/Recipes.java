@@ -127,12 +127,28 @@ public class Recipes {
         plugin.getServer().addRecipe(recipe);
     }
 
-    // Sponge(1): shaped, 1 Yellow Dye + 4 Sugar Cane(Bagasse Cellulose), shape: "s s" " y " "s s"
+    // Sponge(1): shaped, 1 Yellow Dye + 8 Leaves with dye in center
     private void shapedSponge() {
+        // Oak
         ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.SPONGE));
-        recipe.shape("s s", " y ", "s s").setIngredient('y', Material.INK_SACK, 11);
-        recipe.setIngredient('s', Material.SUGAR_CANE);
+        recipe.shape("lll", "lyl", "lll").setIngredient('y', Material.INK_SACK, 11);
+        recipe.setIngredient('l', Material.LEAVES, 0);
         plugin.getServer().addRecipe(recipe);
+        // Pine
+        ShapedRecipe recipe1 = new ShapedRecipe(new ItemStack(Material.SPONGE));
+        recipe1.shape("lll", "lyl", "lll").setIngredient('y', Material.INK_SACK, 11);
+        recipe1.setIngredient('l', Material.LEAVES, 1);
+        plugin.getServer().addRecipe(recipe1);
+        // Birch
+        ShapedRecipe recipe2 = new ShapedRecipe(new ItemStack(Material.SPONGE));
+        recipe2.shape("lll", "lyl", "lll").setIngredient('y', Material.INK_SACK, 11);
+        recipe2.setIngredient('l', Material.LEAVES, 2);
+        plugin.getServer().addRecipe(recipe2);
+        // Jungle
+        ShapedRecipe recipe3 = new ShapedRecipe(new ItemStack(Material.SPONGE));
+        recipe3.shape("lll", "lyl", "lll").setIngredient('y', Material.INK_SACK, 11);
+        recipe3.setIngredient('l', Material.LEAVES, 3);
+        plugin.getServer().addRecipe(recipe3);
     }
 
     // Ice(1): shaped, 2 Snow Block vertically

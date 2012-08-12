@@ -26,7 +26,7 @@ cobweb: true
 sand: true
 # Clay(1): shapeless, 1 Dirt + 1 Gravel
 clay: true
-# Sponge(1): shaped, 1 Yellow Dye + 4 Sugar Cane(Bagasse Cellulose), shape: "s s" " y " "s s"
+# Sponge(1): shaped, 1 Yellow Dye + 8 Leaves with dye in center
 sponge: true
 # Ice(1): shaped, 2 Snow Block vertically
 ice: true
