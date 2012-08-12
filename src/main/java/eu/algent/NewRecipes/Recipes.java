@@ -71,7 +71,7 @@ public class Recipes {
         plugin.getServer().addRecipe(recipe);
     }
 
-    // Chiseled Stone Brick(1): shaped, 8 Stone Brick in hollow square
+    // Chiseled Stone Brick(1): shaped, 2 Stone Bricks Slab vertically
     private void shapedChiseledStoneBrick() {
         ShapedRecipe recipe = new ShapedRecipe(getItemStackData(Material.SMOOTH_BRICK, 1, 3));
         recipe.shape("o", "o").setIngredient('o', Material.STEP, 5);

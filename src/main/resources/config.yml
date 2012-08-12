@@ -10,7 +10,7 @@ moss-stone: true
 moss-stonebrick: true
 # Cracked Stone Brick(1): shapeless, 1 Stone Brick + 1 Flint
 cracked-stonebrick: true
-# Chiseled Stone Brick(1): shaped, 8 Stone Brick in hollow square
+# Chiseled Stone Brick(1): shaped, 2 Stone Bricks Slab vertically
 chiseled-stonebrick: true
 # Seamless Double Slab(1): shaped, 2 Stone Slab vertically
 seamless-doubleslab: true
