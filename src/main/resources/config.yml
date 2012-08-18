@@ -36,3 +36,5 @@ flat-snow: true
 slimeball: true
 # Glowstone Block(1): shaped, 1 Yellow Dye + 1 Torch + 1 Soul Sand vertically
 glowstone: true
+# Full Chain Armor
+chain-armor: true

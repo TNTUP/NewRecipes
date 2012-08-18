@@ -33,6 +33,7 @@ public class Recipes {
         if (plugin.getConfig().getBoolean("flat-snow", true)) shapelessFlatSnow();
         if (plugin.getConfig().getBoolean("slimeball", true)) shapelessSlimeball();
         if (plugin.getConfig().getBoolean("glowstone", true)) shapedGlowstoneBlock();
+        if (plugin.getConfig().getBoolean("chain-armor", true)) shapedChainArmor();
     }
 
     // Grass Block(1): shapeless, 1 Dirt + 1 Seed
@@ -179,6 +180,27 @@ public class Recipes {
         recipe.setIngredient('t', Material.TORCH).setIngredient('s', Material.SOUL_SAND);
         plugin.getServer().addRecipe(recipe);
     }
+
+    // Full Chain Armor
+    public void shapedChainArmor() {
+        // Chain Helmet
+        ShapedRecipe recipeH = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_HELMET));
+        recipeH.shape("ooo", "o o", "   ").setIngredient('o', Material.IRON_FENCE);
+        plugin.getServer().addRecipe(recipeH);
+        // Chain Chestplate
+        ShapedRecipe recipeC = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_CHESTPLATE));
+        recipeC.shape("o o", "ooo", "ooo").setIngredient('o', Material.IRON_FENCE);
+        plugin.getServer().addRecipe(recipeC);
+        // Chain Leggings
+        ShapedRecipe recipeL = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_LEGGINGS));
+        recipeL.shape("ooo", "o o", "o o").setIngredient('o', Material.IRON_FENCE);
+        plugin.getServer().addRecipe(recipeL);
+        // Chain Boots
+        ShapedRecipe recipeB = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_BOOTS));
+        recipeB.shape("   ", "o o", "o o").setIngredient('o', Material.IRON_FENCE);
+        plugin.getServer().addRecipe(recipeB);
+    }
+    
 
     /** 
      * Shortcut to create item stack with data
