@@ -1,5 +1,5 @@
-name: ${project.name}
-main: ${project.groupId}.${project.artifactId}.${project.name}
-version: ${project.version}
-author: Algent
-website: ${project.url}
+name: NewRecipes
+main: eu.algent.newrecipes.NewRecipes
+version: 0.3
+authors: [Algent, socram8888]
+website: https://github.com/socram8888/NewRecipes/

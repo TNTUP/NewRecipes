@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>eu.algent</groupId>
 	<artifactId>NewRecipes</artifactId>
-	<version>0.2-SNAPSHOT</version>
+	<version>0.3</version>
 	<name>NewRecipes</name>
 	<url>https://github.com/Algent/NewRecipes</url>
 	<description>This bukkit plugin add recipes to the game for some existing blocks.</description>
@@ -16,24 +16,7 @@
 		</repository>
 	</repositories>
 	<build>
-		<sourceDirectory>${basedir}/src/main/java/</sourceDirectory>
-		<!-- Resources -->
-		<resources>
-			<resource>
-				<targetPath>.</targetPath>
-				<directory>${basedir}/src/main/resources/</directory>
-				<filtering>true</filtering>
-				<includes>
-					<include>plugin.yml</include>
-					<include>config.yml</include>
-				</includes>
-			</resource>
-		</resources>
-		<defaultGoal>clean install</defaultGoal>
-		<finalName>${project.artifactId}-v${project.version}</finalName>
-		<!-- Plugins -->
 		<plugins>
-			<!-- Compile plugin -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -46,11 +29,10 @@
 		</plugins>
 	</build>
 	<dependencies>
-		<!-- Bukkit -->
 		<dependency>
 			<groupId>org.bukkit</groupId>
 			<artifactId>bukkit</artifactId>
-			<version>1.3.1-R1.1-SNAPSHOT</version>
+			<version>1.5.1-R0.1</version>
 		</dependency>
 	</dependencies>
 </project>
