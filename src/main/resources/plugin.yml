@@ -1,5 +1,5 @@
-name: NewRecipes
-main: eu.algent.newrecipes.NewRecipes
-version: 0.3
-authors: [Algent, socram8888]
-website: https://github.com/socram8888/NewRecipes/
+name: ${project.name}
+authors: [ ${project.authors} ]
+main: ${project.groupId}.${project.artifactId}.${project.plugin}
+version: ${project.version}
+website: ${project.url}

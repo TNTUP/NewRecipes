@@ -1,26 +1,40 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>eu.algent</groupId>
-	<artifactId>NewRecipes</artifactId>
-	<version>0.3</version>
 	<name>NewRecipes</name>
-	<url>https://github.com/Algent/NewRecipes</url>
 	<description>This bukkit plugin add recipes to the game for some existing blocks.</description>
+	<url>https://github.com/socram8888/NewRecipes</url>
+	<groupId>eu.algent</groupId>
+	<artifactId>newrecipes</artifactId>
+	<version>0.3</version>
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+		<project.plugin>NewRecipes</project.plugin>
+		<project.authors>Algent, socram8888</project.authors>
 	</properties>
+	
 	<repositories>
 		<repository>
 			<id>bukkit-repo</id>
 			<url>http://repo.bukkit.org/content/groups/public</url>
 		</repository>
 	</repositories>
+	
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<!--<includes>
+					<include>plugin.yml</include>
+				</includes>-->
+			</resource>
+		</resources>
+		
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>3.1</version>
 				<configuration>
 					<source>1.6</source>
 					<target>1.6</target>

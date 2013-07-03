@@ -38,3 +38,7 @@ slimeball: true
 glowstone: true
 # Full Chain Armor
 chain-armor: true
+# Water: 1 water bucket
+water: true
+# Lava: 1 lava bucket
+lava: true

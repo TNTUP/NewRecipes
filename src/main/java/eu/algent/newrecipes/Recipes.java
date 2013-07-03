@@ -34,6 +34,8 @@ public class Recipes {
         if (plugin.getConfig().getBoolean("slimeball", true)) shapelessSlimeball();
         if (plugin.getConfig().getBoolean("glowstone", true)) shapedGlowstoneBlock();
         if (plugin.getConfig().getBoolean("chain-armor", true)) shapedChainArmor();
+        if (plugin.getConfig().getBoolean("water", true)) shapelessWater();
+        if (plugin.getConfig().getBoolean("lava", true)) shapelessLava();
     }
 
     // Grass Block(1): shapeless, 1 Dirt + 1 Seed
@@ -60,28 +62,28 @@ public class Recipes {
 
     // Mossy Stone Brick(1): shapeless, 1 Stone Brick + 1 Seed
     private void shapelessMossStoneBrick() {
-        ShapelessRecipe recipe = new ShapelessRecipe(getItemStackData(Material.SMOOTH_BRICK, 1, 1));
+        ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.SMOOTH_BRICK, 1, (short) 1));
         recipe.addIngredient(Material.SMOOTH_BRICK).addIngredient(Material.SEEDS);
         plugin.getServer().addRecipe(recipe);
     }
 
     // Cracked Stone Brick(1): shapeless, 1 Stone Brick + 1 Flint
     private void shapelessCrackedStoneBrick() {
-        ShapelessRecipe recipe = new ShapelessRecipe(getItemStackData(Material.SMOOTH_BRICK, 1, 2));
+        ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.SMOOTH_BRICK, 1, (short) 2));
         recipe.addIngredient(Material.SMOOTH_BRICK).addIngredient(Material.FLINT);
         plugin.getServer().addRecipe(recipe);
     }
 
     // Chiseled Stone Brick(1): shaped, 2 Stone Bricks Slab vertically
     private void shapedChiseledStoneBrick() {
-        ShapedRecipe recipe = new ShapedRecipe(getItemStackData(Material.SMOOTH_BRICK, 1, 3));
+        ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.SMOOTH_BRICK, 1, (short) 3));
         recipe.shape("o", "o").setIngredient('o', Material.STEP, 5);
         plugin.getServer().addRecipe(recipe);
     }
 
     // Seamless Double Slab(1): shaped, 2 Stone Slab vertically
     private void shapedSeamlessDoubleSlab() {
-        ShapedRecipe recipe = new ShapedRecipe(getItemStackData(Material.DOUBLE_STEP, 1, 8));
+        ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.SMOOTH_BRICK, 1, (short) 8));
         recipe.shape("o", "o").setIngredient('o', Material.STEP);
         plugin.getServer().addRecipe(recipe);
     }
@@ -130,26 +132,10 @@ public class Recipes {
 
     // Sponge(1): shaped, 1 Yellow Dye + 8 Leaves with dye in center
     private void shapedSponge() {
-        // Oak
         ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.SPONGE));
         recipe.shape("lll", "lyl", "lll").setIngredient('y', Material.INK_SACK, 11);
-        recipe.setIngredient('l', Material.LEAVES, 0);
+        recipe.setIngredient('l', Material.LEAVES, Short.MAX_VALUE);
         plugin.getServer().addRecipe(recipe);
-        // Pine
-        ShapedRecipe recipe1 = new ShapedRecipe(new ItemStack(Material.SPONGE));
-        recipe1.shape("lll", "lyl", "lll").setIngredient('y', Material.INK_SACK, 11);
-        recipe1.setIngredient('l', Material.LEAVES, 1);
-        plugin.getServer().addRecipe(recipe1);
-        // Birch
-        ShapedRecipe recipe2 = new ShapedRecipe(new ItemStack(Material.SPONGE));
-        recipe2.shape("lll", "lyl", "lll").setIngredient('y', Material.INK_SACK, 11);
-        recipe2.setIngredient('l', Material.LEAVES, 2);
-        plugin.getServer().addRecipe(recipe2);
-        // Jungle
-        ShapedRecipe recipe3 = new ShapedRecipe(new ItemStack(Material.SPONGE));
-        recipe3.shape("lll", "lyl", "lll").setIngredient('y', Material.INK_SACK, 11);
-        recipe3.setIngredient('l', Material.LEAVES, 3);
-        plugin.getServer().addRecipe(recipe3);
     }
 
     // Ice(1): shaped, 2 Snow Block vertically
@@ -201,12 +187,17 @@ public class Recipes {
         plugin.getServer().addRecipe(recipeB);
     }
     
-
-    /** 
-     * Shortcut to create item stack with data
-     * @return {@link ItemStack}
-     */
-    public ItemStack getItemStackData (Material material, int amount, int data) {
-        return new ItemStack(material, amount, (short) 0, (byte) data);
+    // Lava(1): shapeless, 1 Lava Bucket
+    private void shapelessLava() {
+        ShapelessRecipe recipe =  new ShapelessRecipe(new ItemStack(Material.STATIONARY_LAVA));
+        recipe.addIngredient(Material.LAVA_BUCKET);
+        plugin.getServer().addRecipe(recipe);
+    }
+    
+    // Water(1): shapeless, 1 Water Bucket
+    private void shapelessWater() {
+        ShapelessRecipe recipe =  new ShapelessRecipe(new ItemStack(Material.STATIONARY_WATER));
+        recipe.addIngredient(Material.WATER_BUCKET);
+        plugin.getServer().addRecipe(recipe);
     }
 }
