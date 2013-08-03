@@ -1,3 +1,4 @@
+
 package eu.algent.newrecipes;
 
 import org.bukkit.plugin.java.JavaPlugin;

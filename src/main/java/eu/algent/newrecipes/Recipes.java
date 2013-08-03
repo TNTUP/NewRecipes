@@ -1,3 +1,4 @@
+
 package eu.algent.newrecipes;
 
 import org.bukkit.Material;
@@ -186,14 +187,14 @@ public class Recipes {
         recipeB.shape("   ", "o o", "o o").setIngredient('o', Material.IRON_FENCE);
         plugin.getServer().addRecipe(recipeB);
     }
-    
+
     // Lava(1): shapeless, 1 Lava Bucket
     private void shapelessLava() {
         ShapelessRecipe recipe =  new ShapelessRecipe(new ItemStack(Material.STATIONARY_LAVA));
         recipe.addIngredient(Material.LAVA_BUCKET);
         plugin.getServer().addRecipe(recipe);
     }
-    
+
     // Water(1): shapeless, 1 Water Bucket
     private void shapelessWater() {
         ShapelessRecipe recipe =  new ShapelessRecipe(new ItemStack(Material.STATIONARY_WATER));
