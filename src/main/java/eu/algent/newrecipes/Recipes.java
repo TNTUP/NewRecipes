@@ -37,6 +37,7 @@ public class Recipes {
         if (plugin.getConfig().getBoolean("chain-armor", true)) shapedChainArmor();
         if (plugin.getConfig().getBoolean("water", true)) shapelessWater();
         if (plugin.getConfig().getBoolean("lava", true)) shapelessLava();
+        if (plugin.getConfig().getBoolean("locked-chest", true)) shapedLockedChest();
     }
 
     // Grass Block(1): shapeless, 1 Dirt + 1 Seed
@@ -172,7 +173,7 @@ public class Recipes {
     public void shapedChainArmor() {
         // Chain Helmet
         ShapedRecipe recipeH = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_HELMET));
-        recipeH.shape("ooo", "o o", "   ").setIngredient('o', Material.IRON_FENCE);
+        recipeH.shape("ooo", "o o").setIngredient('o', Material.IRON_FENCE);
         plugin.getServer().addRecipe(recipeH);
         // Chain Chestplate
         ShapedRecipe recipeC = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_CHESTPLATE));
@@ -184,7 +185,7 @@ public class Recipes {
         plugin.getServer().addRecipe(recipeL);
         // Chain Boots
         ShapedRecipe recipeB = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_BOOTS));
-        recipeB.shape("   ", "o o", "o o").setIngredient('o', Material.IRON_FENCE);
+        recipeB.shape("o o", "o o").setIngredient('o', Material.IRON_FENCE);
         plugin.getServer().addRecipe(recipeB);
     }
 
@@ -199,6 +200,15 @@ public class Recipes {
     private void shapelessWater() {
         ShapelessRecipe recipe =  new ShapelessRecipe(new ItemStack(Material.STATIONARY_WATER));
         recipe.addIngredient(Material.WATER_BUCKET);
+        plugin.getServer().addRecipe(recipe);
+    }
+
+    // Locked Chest(4): 1 pink wool + 1 black wool, 1 black wool + 1 pink wool
+    private void shapedLockedChest() {
+        ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.LOCKED_CHEST, 4));
+        recipe.shape("pb", "bp");
+		recipe.setIngredient('p', Material.WOOL, 2);
+		recipe.setIngredient('b', Material.WOOL, 15);
         plugin.getServer().addRecipe(recipe);
     }
 }

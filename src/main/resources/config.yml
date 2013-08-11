@@ -38,7 +38,9 @@ slimeball: true
 glowstone: true
 # Full Chain Armor
 chain-armor: true
-# Water: 1 water bucket
+# Water(1): 1 water bucket
 water: true
-# Lava: 1 lava bucket
+# Lava(1): 1 lava bucket
 lava: true
+# Locked Chest(4): its texture with wool (1 pink wool + 1 black wool, 1 black wool + 1 pink wool)
+locked-chest: true
