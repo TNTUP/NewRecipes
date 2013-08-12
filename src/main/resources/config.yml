@@ -47,5 +47,5 @@ recipes:
     locked-chest: true
 
 extras:
-    # Disables locked chest decay
+    # Disables locked chest decay. AFAIK working only in SportCraft.
     disable-locked-chest-decay: true

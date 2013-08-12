@@ -5,7 +5,7 @@
 	<url>https://github.com/socram8888/NewRecipes</url>
 	<groupId>eu.algent</groupId>
 	<artifactId>newrecipes</artifactId>
-	<version>0.3</version>
+	<version>0.4</version>
 	<properties>
 		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
 		<project.plugin>NewRecipes</project.plugin>
