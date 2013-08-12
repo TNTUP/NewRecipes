@@ -1,46 +1,51 @@
 # NewRecipes's configuration file
 
-# Grass Block(1): shapeless, 1 Dirt + 1 Seed
-grass-block: true
-# Mycelium(1): shaped, 1 Brown Mushroom + 1 Red Mushroom + 1 Dirt vertically
-mycelium: true
-# Moss Stone(1): shapeless, 1 Cobblestone + 1 Seed
-moss-stone: true
-# Mossy Stone Brick(1): shapeless, 1 Stone Brick + 1 Seed
-moss-stonebrick: true
-# Cracked Stone Brick(1): shapeless, 1 Stone Brick + 1 Flint
-cracked-stonebrick: true
-# Chiseled Stone Brick(1): shaped, 2 Stone Bricks Slab vertically
-chiseled-stonebrick: true
-# Seamless Double Slab(1): shaped, 2 Stone Slab vertically
-seamless-doubleslab: true
-# Nether Brick(4): shaped, 4 Netherrack in square
-netherbrick: true
-# Soul Sand(1): shapeless, 1 Netherrack + 1 Gravel
-soulsand: true
-# String(4): shapeless, 1 Wool
-string: true
-# Cobweb(2): shaped, 5 strings in X
-cobweb: true
-# Sand(4): shapeless, 1 Sandstone
-sand: true
-# Clay(1): shapeless, 1 Dirt + 1 Gravel
-clay: true
-# Sponge(1): shaped, 1 Yellow Dye + 8 Leaves with dye in center
-sponge: true
-# Ice(1): shaped, 2 Snow Block vertically
-ice: true
-# Flat Snow(1): shapeless, 1 Snow Ball
-flat-snow: true
-# Slimeball(1): shapeless, 1 Milk + 1 Lime Dye
-slimeball: true
-# Glowstone Block(1): shaped, 1 Yellow Dye + 1 Torch + 1 Soul Sand vertically
-glowstone: true
-# Full Chain Armor
-chain-armor: true
-# Water(1): 1 water bucket
-water: true
-# Lava(1): 1 lava bucket
-lava: true
-# Locked Chest(4): its texture with wool (1 pink wool + 1 black wool, 1 black wool + 1 pink wool)
-locked-chest: true
+recipes:
+    # Grass Block(1): shapeless, 1 Dirt + 1 Seed
+    grass-block: true
+    # Mycelium(1): shaped, 1 Brown Mushroom + 1 Red Mushroom + 1 Dirt vertically
+    mycelium: true
+    # Moss Stone(1): shapeless, 1 Cobblestone + 1 Seed
+    moss-stone: true
+    # Mossy Stone Brick(1): shapeless, 1 Stone Brick + 1 Seed
+    moss-stonebrick: true
+    # Cracked Stone Brick(1): shapeless, 1 Stone Brick + 1 Flint
+    cracked-stonebrick: true
+    # Chiseled Stone Brick(1): shaped, 2 Stone Bricks Slab vertically
+    chiseled-stonebrick: true
+    # Seamless Double Slab(1): shaped, 2 Stone Slab vertically
+    seamless-doubleslab: true
+    # Nether Brick(4): shaped, 4 Netherrack in square
+    netherbrick: true
+    # Soul Sand(1): shapeless, 1 Netherrack + 1 Gravel
+    soulsand: true
+    # String(4): shapeless, 1 Wool
+    string: true
+    # Cobweb(2): shaped, 5 strings in X
+    cobweb: true
+    # Sand(4): shapeless, 1 Sandstone
+    sand: true
+    # Clay(1): shapeless, 1 Dirt + 1 Gravel
+    clay: true
+    # Sponge(1): shaped, 1 Yellow Dye + 8 Leaves with dye in center
+    sponge: true
+    # Ice(1): shaped, 2 Snow Block vertically
+    ice: true
+    # Flat Snow(1): shapeless, 1 Snow Ball
+    flat-snow: true
+    # Slimeball(1): shapeless, 1 Milk + 1 Lime Dye
+    slimeball: true
+    # Glowstone Block(1): shaped, 1 Yellow Dye + 1 Torch + 1 Soul Sand vertically
+    glowstone: true
+    # Full Chain Armor
+    chain-armor: true
+    # Water(1): 1 water bucket
+    water: true
+    # Lava(1): 1 lava bucket
+    lava: true
+    # Locked Chest(4): its texture with wool (1 pink wool + 1 black wool, 1 black wool + 1 pink wool)
+    locked-chest: true
+
+extras:
+    # Disables locked chest decay
+    disable-locked-chest-decay: true
