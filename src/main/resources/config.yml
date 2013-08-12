@@ -15,8 +15,6 @@ recipes:
     chiseled-stonebrick: true
     # Seamless Double Slab(1): shaped, 2 Stone Slab vertically
     seamless-doubleslab: true
-    # Nether Brick(4): shaped, 4 Netherrack in square
-    netherbrick: true
     # Soul Sand(1): shapeless, 1 Netherrack + 1 Gravel
     soulsand: true
     # String(4): shapeless, 1 Wool
@@ -31,8 +29,6 @@ recipes:
     sponge: true
     # Ice(1): shaped, 2 Snow Block vertically
     ice: true
-    # Flat Snow(1): shapeless, 1 Snow Ball
-    flat-snow: true
     # Slimeball(1): shapeless, 1 Milk + 1 Lime Dye
     slimeball: true
     # Glowstone Block(1): shaped, 1 Yellow Dye + 1 Torch + 1 Soul Sand vertically

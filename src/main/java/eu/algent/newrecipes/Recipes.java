@@ -25,7 +25,6 @@ public class Recipes {
 		if (recipeConfig.getBoolean("cracked-stonebrick", true)) shapelessCrackedStoneBrick();
 		if (recipeConfig.getBoolean("chiseled-stonebrick", true)) shapedChiseledStoneBrick();
 		if (recipeConfig.getBoolean("seamless-doubleslab", true)) shapedSeamlessDoubleSlab();
-		if (recipeConfig.getBoolean("netherbrick", true)) shapedNetherBrick();
 		if (recipeConfig.getBoolean("soulsand", true)) shapelessSoulSand();	
 		if (recipeConfig.getBoolean("string", true)) shapelessString();
 		if (recipeConfig.getBoolean("cobweb", true)) shapedCobweb();
@@ -33,7 +32,6 @@ public class Recipes {
 		if (recipeConfig.getBoolean("clay", true)) shapelessClay();
 		if (recipeConfig.getBoolean("sponge", true)) shapedSponge();
 		if (recipeConfig.getBoolean("ice", true)) shapedIce();
-		if (recipeConfig.getBoolean("flat-snow", true)) shapelessFlatSnow();
 		if (recipeConfig.getBoolean("slimeball", true)) shapelessSlimeball();
 		if (recipeConfig.getBoolean("glowstone", true)) shapedGlowstoneBlock();
 		if (recipeConfig.getBoolean("chain-armor", true)) shapedChainArmor();
@@ -93,13 +91,6 @@ public class Recipes {
 		plugin.getServer().addRecipe(recipe);
 	}
 
-	// Nether Brick(4): shaped, 4 Netherrack in square
-	private void shapedNetherBrick() {
-		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.NETHER_BRICK, 4));
-		recipe.shape("oo", "oo").setIngredient('o', Material.NETHERRACK);
-		plugin.getServer().addRecipe(recipe);
-	}
-
 	// Soul Sand(1): shapeless, 1 Netherrack + 1 Gravel
 	private void shapelessSoulSand() {
 		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.SOUL_SAND, 1));
@@ -147,13 +138,6 @@ public class Recipes {
 	private void shapedIce() {
 		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.ICE));
 		recipe.shape("o", "o").setIngredient('o', Material.SNOW_BLOCK);
-		plugin.getServer().addRecipe(recipe);
-	}
-
-	// Flat Snow(1): shapeless, 1 Snow Ball
-	private void shapelessFlatSnow() {
-		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.SNOW));
-		recipe.addIngredient(Material.SNOW_BALL);
 		plugin.getServer().addRecipe(recipe);
 	}
 
@@ -208,7 +192,7 @@ public class Recipes {
 
 	// Locked Chest(2): 1 pink wool + 1 black wool, 1 black wool + 1 pink wool
 	private void shapedLockedChest() {
-		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.LOCKED_CHEST, 2));
+		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.LOCKED_CHEST));
 		recipe.shape("pb", "bp");
 		recipe.setIngredient('p', Material.WOOL, 2);
 		recipe.setIngredient('b', Material.WOOL, 15);
@@ -217,7 +201,7 @@ public class Recipes {
 
 	// Dyed Dead Bush(1): 1 cactus green dye + 1 dead bush
 	private void shapelessDyedDeadBush() {
-		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.LONG_GRASS, 3));
+		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.LONG_GRASS, 1, (short) 3));
 		recipe.addIngredient(Material.DEAD_BUSH);
 		recipe.addIngredient(Material.INK_SACK, 2);
 		plugin.getServer().addRecipe(recipe);
