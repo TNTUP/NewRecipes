@@ -1,6 +1,7 @@
 
 package eu.algent.newrecipes;
 
+import org.bukkit.DyeColor;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -66,14 +67,14 @@ public class Recipes {
 	// Mossy Stone Brick(1): shapeless, 1 Stone Brick + 1 Seed
 	private void shapelessMossStoneBrick() {
 		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.SMOOTH_BRICK, 1, (short) 1));
-		recipe.addIngredient(Material.SMOOTH_BRICK).addIngredient(Material.SEEDS);
+		recipe.addIngredient(Material.SMOOTH_BRICK, 0).addIngredient(Material.SEEDS);
 		plugin.getServer().addRecipe(recipe);
 	}
 
 	// Cracked Stone Brick(1): shapeless, 1 Stone Brick + 1 Flint
 	private void shapelessCrackedStoneBrick() {
 		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.SMOOTH_BRICK, 1, (short) 2));
-		recipe.addIngredient(Material.SMOOTH_BRICK).addIngredient(Material.FLINT);
+		recipe.addIngredient(Material.SMOOTH_BRICK, 0).addIngredient(Material.FLINT);
 		plugin.getServer().addRecipe(recipe);
 	}
 
@@ -86,8 +87,8 @@ public class Recipes {
 
 	// Seamless Double Slab(1): shaped, 2 Stone Slab vertically
 	private void shapedSeamlessDoubleSlab() {
-		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.SMOOTH_BRICK, 1, (short) 8));
-		recipe.shape("o", "o").setIngredient('o', Material.STEP);
+		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.DOUBLE_STEP, 1, (short) 8));
+		recipe.shape("o", "o").setIngredient('o', Material.STEP, 0);
 		plugin.getServer().addRecipe(recipe);
 	}
 
@@ -129,7 +130,8 @@ public class Recipes {
 	// Sponge(1): shaped, 1 Yellow Dye + 8 Leaves with dye in center
 	private void shapedSponge() {
 		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.SPONGE));
-		recipe.shape("lll", "lyl", "lll").setIngredient('y', Material.INK_SACK, 11);
+		recipe.shape("lll", "lyl", "lll");
+		recipe.setIngredient('y', Material.INK_SACK, DyeColor.YELLOW.getDyeData());
 		recipe.setIngredient('l', Material.LEAVES, Short.MAX_VALUE);
 		plugin.getServer().addRecipe(recipe);
 	}
@@ -143,16 +145,18 @@ public class Recipes {
 
 	// Slimeball(1): shapeless, 1 Milk + 1 Lime Dye
 	public void shapelessSlimeball() {
-		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.SLIME_BALL, 1));
-		recipe.addIngredient(Material.MILK_BUCKET).addIngredient(Material.INK_SACK, 10);
+		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.SLIME_BALL));
+		recipe.addIngredient(Material.MILK_BUCKET);
+		recipe.addIngredient(Material.INK_SACK, DyeColor.LIME.getDyeData());
 		plugin.getServer().addRecipe(recipe);
 	}
 
-	// Glowstone Block(1): shaped, 1 Yellow Dye + 1 Torch + 1 Soul Sand vertically
+	// Glowstone(1): shapeless, 1 Yellow Dye + 1 Torch + 1 Glass
 	public void shapedGlowstoneBlock() {
-		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.GLOWSTONE));
-		recipe.shape("y", "t", "s").setIngredient('y', Material.INK_SACK, 11);
-		recipe.setIngredient('t', Material.TORCH).setIngredient('s', Material.SOUL_SAND);
+		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.GLOWSTONE));
+		recipe.addIngredient(Material.INK_SACK, DyeColor.YELLOW.getDyeData());
+		recipe.addIngredient(Material.TORCH);
+		recipe.addIngredient(Material.GLASS);
 		plugin.getServer().addRecipe(recipe);
 	}
 
@@ -190,12 +194,12 @@ public class Recipes {
 		plugin.getServer().addRecipe(recipe);
 	}
 
-	// Locked Chest(2): 1 pink wool + 1 black wool, 1 black wool + 1 pink wool
+	// Locked Chest(2): 1 magenta wool + 1 black wool, 1 black wool + 1 magenta wool
 	private void shapedLockedChest() {
 		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.LOCKED_CHEST));
-		recipe.shape("pb", "bp");
-		recipe.setIngredient('p', Material.WOOL, 2);
-		recipe.setIngredient('b', Material.WOOL, 15);
+		recipe.shape("mb", "mp");
+		recipe.setIngredient('m', Material.WOOL, DyeColor.MAGENTA.getWoolData());
+		recipe.setIngredient('b', Material.WOOL, DyeColor.BLACK.getWoolData());
 		plugin.getServer().addRecipe(recipe);
 	}
 

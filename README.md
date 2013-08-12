@@ -64,6 +64,12 @@ Recipes:
    ![Air][mat_air]![String][mat_string]![Air][mat_air]![=>][arrow]_2x_![Cobweb][mat_cobweb]  
    ![String][mat_string]![Air][mat_air]![String][mat_string]
 
+ * __Sand__ (shapeless):
+
+   ![Air][mat_air]![Air][mat_air]![Air][mat_air]  
+   ![Air][mat_air]![Sandstone][mat_sandstone]![Air][mat_air]![=>][arrow]_4x_![Sand][mat_sand]  
+   ![Air][mat_air]![Air][mat_air]![Air][mat_air]
+
  * __Clay Block__ (shapeless):
 
    ![Dirt][mat_dirt]![Air][mat_air]![Air][mat_air]  
@@ -178,6 +184,8 @@ Recipes:
 [mat_mycelium]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_mycelium.png
 [mat_netherrack]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_netherrack.png
 [mat_red_mushroom]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_red_mushroom.png
+[mat_sand]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_sand.png
+[mat_sandstone]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_sandstone.png
 [mat_seeds]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_seeds.png
 [mat_slimeball]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_slimeball.png
 [mat_smooth_double_stone_slab]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_smooth_double_stone_slab.png
