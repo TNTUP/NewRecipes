@@ -40,6 +40,7 @@ public class Recipes {
 		if (recipeConfig.getBoolean("water", true)) shapelessWater();
 		if (recipeConfig.getBoolean("lava", true)) shapelessLava();
 		if (recipeConfig.getBoolean("locked-chest", true)) shapedLockedChest();
+		if (recipeConfig.getBoolean("dyed-deadbush", true)) shapelessDyedDeadBush();
 	}
 
 	// Grass Block(1): shapeless, 1 Dirt + 1 Seed
@@ -211,6 +212,14 @@ public class Recipes {
 		recipe.shape("pb", "bp");
 		recipe.setIngredient('p', Material.WOOL, 2);
 		recipe.setIngredient('b', Material.WOOL, 15);
+		plugin.getServer().addRecipe(recipe);
+	}
+
+	// Dyed Dead Bush(1): 1 cactus green dye + 1 dead bush
+	private void shapelessDyedDeadBush() {
+		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.LONG_GRASS, 3));
+		recipe.addIngredient(Material.DEAD_BUSH);
+		recipe.addIngredient(Material.INK_SACK, 2);
 		plugin.getServer().addRecipe(recipe);
 	}
 }
