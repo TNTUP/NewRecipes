@@ -43,7 +43,7 @@ recipes:
     water: true
     # Lava(1): 1 lava bucket
     lava: true
-    # Locked Chest(4): its texture with wool (1 pink wool + 1 black wool, 1 black wool + 1 pink wool)
+    # Locked Chest(2): its texture with wool (1 pink wool + 1 black wool, 1 black wool + 1 pink wool)
     locked-chest: true
 
 extras:

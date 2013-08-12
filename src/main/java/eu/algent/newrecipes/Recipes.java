@@ -205,9 +205,9 @@ public class Recipes {
 		plugin.getServer().addRecipe(recipe);
 	}
 
-	// Locked Chest(4): 1 pink wool + 1 black wool, 1 black wool + 1 pink wool
+	// Locked Chest(2): 1 pink wool + 1 black wool, 1 black wool + 1 pink wool
 	private void shapedLockedChest() {
-		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.LOCKED_CHEST, 4));
+		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.LOCKED_CHEST, 2));
 		recipe.shape("pb", "bp");
 		recipe.setIngredient('p', Material.WOOL, 2);
 		recipe.setIngredient('b', Material.WOOL, 15);
