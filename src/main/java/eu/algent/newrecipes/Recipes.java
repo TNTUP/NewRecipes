@@ -1,4 +1,3 @@
-
 package eu.algent.newrecipes;
 
 import org.bukkit.DyeColor;
@@ -197,7 +196,7 @@ public class Recipes {
 	// Locked Chest(2): 1 magenta wool + 1 black wool, 1 black wool + 1 magenta wool
 	private void shapedLockedChest() {
 		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.LOCKED_CHEST));
-		recipe.shape("mb", "mp");
+		recipe.shape("mb", "mb");
 		recipe.setIngredient('m', Material.WOOL, DyeColor.MAGENTA.getWoolData());
 		recipe.setIngredient('b', Material.WOOL, DyeColor.BLACK.getWoolData());
 		plugin.getServer().addRecipe(recipe);
