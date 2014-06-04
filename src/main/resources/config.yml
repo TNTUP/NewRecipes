@@ -39,11 +39,6 @@ recipes:
     water: true
     # Lava(1): 1 lava bucket
     lava: true
-    # Locked Chest(2): its texture with wool (1 pink wool + 1 black wool, 1 black wool + 1 pink wool)
-    locked-chest: true
     # Dyed Dead Bush(1): 1 cactus green dye + 1 dead bush
     dyed-deadbush: true
 
-extras:
-    # Disables locked chest decay. AFAIK working only in SportCraft.
-    disable-locked-chest-decay: true

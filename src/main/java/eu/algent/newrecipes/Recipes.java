@@ -37,7 +37,6 @@ public class Recipes {
 		if (recipeConfig.getBoolean("chain-armor", true)) shapedChainArmor();
 		if (recipeConfig.getBoolean("water", true)) shapelessWater();
 		if (recipeConfig.getBoolean("lava", true)) shapelessLava();
-		if (recipeConfig.getBoolean("locked-chest", true)) shapedLockedChest();
 		if (recipeConfig.getBoolean("dyed-deadbush", true)) shapelessDyedDeadBush();
 	}
 

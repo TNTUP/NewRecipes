@@ -136,12 +136,6 @@ Recipes:
    ![Air][mat_air]![Water Bucket][mat_water_bucket]![Air][mat_air]![=>][arrow]![Static Water][mat_water]  
    ![Air][mat_air]![Air][mat_air]![Air][mat_air]
 
- * __Locked Chest__ (shaped):
-
-   ![Magenta Wool][mat_magenta_wool]![Black Wool][mat_black_wool]![Air][mat_air]  
-   ![Black Wool][mat_black_wool]![Magenta Wool][mat_magenta_wool]![Air][mat_air]![=>][arrow]![Locked Chest][mat_locked_chest]  
-   ![Air][mat_air]![Air][mat_air]![Air][mat_air]
-
  * __Dyed Dead Bush__ (shapeless):
 
    ![Cactus Green][mat_green_dye]![Air][mat_air]![Air][mat_air]  
@@ -150,7 +144,6 @@ Recipes:
 
 [arrow]: https://raw.github.com/socram8888/NewRecipes/master/assets/arrow.png
 [mat_air]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_air.png
-[mat_black_wool]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_black_wool.png
 [mat_brown_mushroom]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_brown_mushroom.png
 [mat_chain_boots]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_chain_boots.png
 [mat_chain_chestplate]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_chain_chestplate.png
@@ -176,8 +169,6 @@ Recipes:
 [mat_lava_bucket]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_lava_bucket.png
 [mat_leaves]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_leaves.png
 [mat_lime_dye]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_lime_dye.png
-[mat_locked_chest]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_locked_chest.png
-[mat_magenta_wool]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_magenta_wool.png
 [mat_milk_bucket]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_milk_bucket.png
 [mat_moss_stone]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_moss_stone.png
 [mat_mossy_stone_brick]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_mossy_stone_brick.png

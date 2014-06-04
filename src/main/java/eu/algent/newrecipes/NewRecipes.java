@@ -10,8 +10,5 @@ public class NewRecipes extends JavaPlugin {
 		saveDefaultConfig();
 		// Init
 		new Recipes(this);
-		if (getConfig().getBoolean("extras.disable-locked-chest-decay", true)) {
-			new LockedChestListener(this);
-		};
 	}
 }
