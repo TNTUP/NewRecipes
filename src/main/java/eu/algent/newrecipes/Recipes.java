@@ -55,17 +55,17 @@ public class Recipes {
 		plugin.getServer().addRecipe(recipe);
 	}
 
-	// Moss Stone(1): shapeless, 1 Cobblestone + 1 Seed
+	// Moss Stone(1): shapeless, 1 Cobblestone + 1 Vines
 	private void shapelessMossStone() {
 		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.MOSSY_COBBLESTONE));
-		recipe.addIngredient(Material.COBBLESTONE).addIngredient(Material.SEEDS);
+		recipe.addIngredient(Material.COBBLESTONE).addIngredient(Material.VINE);
 		plugin.getServer().addRecipe(recipe);
 	}
 
-	// Mossy Stone Brick(1): shapeless, 1 Stone Brick + 1 Seed
+	// Mossy Stone Brick(1): shapeless, 1 Stone Brick + 1 Vine
 	private void shapelessMossStoneBrick() {
 		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.SMOOTH_BRICK, 1, (short) 1));
-		recipe.addIngredient(Material.SMOOTH_BRICK, 0).addIngredient(Material.SEEDS);
+		recipe.addIngredient(Material.SMOOTH_BRICK, 0).addIngredient(Material.VINE);
 		plugin.getServer().addRecipe(recipe);
 	}
 

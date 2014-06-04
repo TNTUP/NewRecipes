@@ -18,13 +18,13 @@ Recipes:
 
  * __Moss Stone__ (shapeless):
 
-   ![Seeds][mat_seeds]![Air][mat_air]![Air][mat_air]  
+   ![Vines][mat_vines]![Air][mat_air]![Air][mat_air]  
    ![Air][mat_air]![Cobblestone][mat_cobblestone]![Air][mat_air]![=>][arrow]![Moss Stone][mat_moss_stone]  
    ![Air][mat_air]![Air][mat_air]![Air][mat_air]
 
  * __Mossy Stone Brick__ (shapeless):
 
-   ![Seeds][mat_seeds]![Air][mat_air]![Air][mat_air]  
+   ![Vines][mat_vines]![Air][mat_air]![Air][mat_air]  
    ![Air][mat_air]![Stone Brick][mat_stone_brick]![Air][mat_air]![=>][arrow]![Mossy Stone Brick][mat_mossy_stone_brick]  
    ![Air][mat_air]![Air][mat_air]![Air][mat_air]
 
@@ -189,7 +189,8 @@ Recipes:
 [mat_stone_slab]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_stone_slab.png
 [mat_string]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_string.png
 [mat_torch]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_torch.png
-[mat_yellow_dye]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_yellow_dye.png
+[mat_vines]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_vines.png
 [mat_water]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_water.png
 [mat_water_bucket]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_water_bucket.png
 [mat_white_wool]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_white_wool.png
+[mat_yellow_dye]: https://raw.github.com/socram8888/NewRecipes/master/assets/mat_yellow_dye.png
