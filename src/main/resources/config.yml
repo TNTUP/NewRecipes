@@ -41,4 +41,6 @@ recipes:
     lava: true
     # Dyed Dead Bush(1): 1 cactus green dye + 1 dead bush
     dyed-deadbush: true
+    # Charcoal Block(1): 9 coal
+    charcoal-block: true
 

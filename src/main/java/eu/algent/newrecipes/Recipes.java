@@ -1,8 +1,9 @@
 package eu.algent.newrecipes;
 
+import org.bukkit.CoalType;
 import org.bukkit.DyeColor;
-import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.Material;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.ShapelessRecipe;
@@ -38,6 +39,7 @@ public class Recipes {
 		if (recipeConfig.getBoolean("water", true)) shapelessWater();
 		if (recipeConfig.getBoolean("lava", true)) shapelessLava();
 		if (recipeConfig.getBoolean("dyed-deadbush", true)) shapelessDyedDeadBush();
+		if (recipeConfig.getBoolean("charcoal-block", true)) shapedCharcoalBlock();
 	}
 
 	// Grass Block(1): shapeless, 1 Dirt + 1 Seed
@@ -206,6 +208,14 @@ public class Recipes {
 		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.LONG_GRASS, 1, (short) 3));
 		recipe.addIngredient(Material.DEAD_BUSH);
 		recipe.addIngredient(Material.INK_SACK, 2);
+		plugin.getServer().addRecipe(recipe);
+	}
+
+	// Charcoal Block(1): 9 Charcoal
+	private void shapedCharcoalBlock() {
+		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.COAL_BLOCK, 1, (short) 1));
+		recipe.shape("ccc", "ccc", "ccc");
+		recipe.setIngredient('c', Material.COAL, CoalType.CHARCOAL.getData());
 		plugin.getServer().addRecipe(recipe);
 	}
 }
