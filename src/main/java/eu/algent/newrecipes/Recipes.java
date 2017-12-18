@@ -1,8 +1,6 @@
 package eu.algent.newrecipes;
 
-import org.bukkit.CoalType;
-import org.bukkit.DyeColor;
-import org.bukkit.Material;
+import org.bukkit.*;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
@@ -44,14 +42,14 @@ public class Recipes {
 
 	// Grass Block(1): shapeless, 1 Dirt + 1 Seed
 	private void shapelessGrassBlock() {
-		ShapelessRecipe recipe =  new ShapelessRecipe(new ItemStack(Material.GRASS));
+		ShapelessRecipe recipe = new ShapelessRecipe(new NamespacedKey(plugin, "Grass"), new ItemStack(Material.GRASS));
 		recipe.addIngredient(Material.DIRT).addIngredient(Material.SEEDS);
 		plugin.getServer().addRecipe(recipe);
 	}
 
 	// Mycelium(1): shaped, 1 Brown Mushroom + 1 Red Mushroom + 1 Dirt vertically
 	private void shapedMycelium() {
-		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.MYCEL));
+		ShapedRecipe recipe = new ShapedRecipe(new NamespacedKey(plugin, "Mycelium"),new ItemStack(Material.MYCEL));
 		recipe.shape("b", "r", "d").setIngredient('d', Material.DIRT);
 		recipe.setIngredient('r', Material.RED_MUSHROOM).setIngredient('b', Material.BROWN_MUSHROOM);
 		plugin.getServer().addRecipe(recipe);
@@ -59,77 +57,77 @@ public class Recipes {
 
 	// Moss Stone(1): shapeless, 1 Cobblestone + 1 Vines
 	private void shapelessMossStone() {
-		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.MOSSY_COBBLESTONE));
+		ShapelessRecipe recipe = new ShapelessRecipe(new NamespacedKey(plugin, "Moss_Stone"), new ItemStack(Material.MOSSY_COBBLESTONE));
 		recipe.addIngredient(Material.COBBLESTONE).addIngredient(Material.VINE);
 		plugin.getServer().addRecipe(recipe);
 	}
 
 	// Mossy Stone Brick(1): shapeless, 1 Stone Brick + 1 Vine
 	private void shapelessMossStoneBrick() {
-		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.SMOOTH_BRICK, 1, (short) 1));
+		ShapelessRecipe recipe = new ShapelessRecipe(new NamespacedKey(plugin, "Smooth_Moss_Brick"), new ItemStack(Material.SMOOTH_BRICK, 1, (short) 1));
 		recipe.addIngredient(Material.SMOOTH_BRICK, 0).addIngredient(Material.VINE);
 		plugin.getServer().addRecipe(recipe);
 	}
 
 	// Cracked Stone Brick(1): shapeless, 1 Stone Brick + 1 Flint
 	private void shapelessCrackedStoneBrick() {
-		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.SMOOTH_BRICK, 1, (short) 2));
+		ShapelessRecipe recipe = new ShapelessRecipe(new NamespacedKey(plugin, "Smooth_Cracked_Brick"), new ItemStack(Material.SMOOTH_BRICK, 1, (short) 2));
 		recipe.addIngredient(Material.SMOOTH_BRICK, 0).addIngredient(Material.FLINT);
 		plugin.getServer().addRecipe(recipe);
 	}
 
 	// Chiseled Stone Brick(1): shaped, 2 Stone Bricks Slab vertically
 	private void shapedChiseledStoneBrick() {
-		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.SMOOTH_BRICK, 1, (short) 3));
+		ShapedRecipe recipe = new ShapedRecipe(new NamespacedKey(plugin, "Smooth_Chiseled_Brick"), new ItemStack(Material.SMOOTH_BRICK, 1, (short) 3));
 		recipe.shape("o", "o").setIngredient('o', Material.STEP, 5);
 		plugin.getServer().addRecipe(recipe);
 	}
 
 	// Seamless Double Slab(1): shaped, 2 Stone Slab vertically
 	private void shapedSeamlessDoubleSlab() {
-		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.DOUBLE_STEP, 1, (short) 8));
+		ShapedRecipe recipe = new ShapedRecipe(new NamespacedKey(plugin, "Seamless_Double_Slab"), new ItemStack(Material.DOUBLE_STEP, 1, (short) 8));
 		recipe.shape("o", "o").setIngredient('o', Material.STEP, 0);
 		plugin.getServer().addRecipe(recipe);
 	}
 
 	// Soul Sand(1): shapeless, 1 Netherrack + 1 Gravel
 	private void shapelessSoulSand() {
-		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.SOUL_SAND, 1));
+		ShapelessRecipe recipe = new ShapelessRecipe(new NamespacedKey(plugin, "Soul_Sand"), new ItemStack(Material.SOUL_SAND, 1));
 		recipe.addIngredient(Material.NETHERRACK).addIngredient(Material.GRAVEL);
 		plugin.getServer().addRecipe(recipe);
 	}
 
 	// String(4): shapeless, 1 Wool
 	private void shapelessString() {
-		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.STRING, 4));
+		ShapelessRecipe recipe = new ShapelessRecipe(new NamespacedKey(plugin, "String"), new ItemStack(Material.STRING, 4));
 		recipe.addIngredient(Material.WOOL);
 		plugin.getServer().addRecipe(recipe);
 	}
 
 	// Cobweb(2): shaped, 5 strings in X
 	private void shapedCobweb() {
-		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.WEB, 2));
+		ShapedRecipe recipe = new ShapedRecipe(new NamespacedKey(plugin, "Cobweb"), new ItemStack(Material.WEB, 2));
 		recipe.shape("o o", " o ", "o o").setIngredient('o', Material.STRING);
 		plugin.getServer().addRecipe(recipe);
 	}
 
 	// Sand(4): shapeless, 1 Sandstone
 	private void shapelessSand() {
-		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.SAND, 4));
+		ShapelessRecipe recipe = new ShapelessRecipe(new NamespacedKey(plugin, "Sand"), new ItemStack(Material.SAND, 4));
 		recipe.addIngredient(Material.SANDSTONE);
 		plugin.getServer().addRecipe(recipe);
 	}
 
 	// Clay(1): shapeless, 1 Dirt + 1 Gravel
 	private void shapelessClay() {
-		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.CLAY));
+		ShapelessRecipe recipe = new ShapelessRecipe(new NamespacedKey(plugin, "Clay"), new ItemStack(Material.CLAY));
 		recipe.addIngredient(Material.DIRT).addIngredient(Material.GRAVEL);
 		plugin.getServer().addRecipe(recipe);
 	}
 
 	// Sponge(1): shaped, 1 Yellow Dye + 8 Leaves with dye in center
 	private void shapedSponge() {
-		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.SPONGE));
+		ShapedRecipe recipe = new ShapedRecipe(new NamespacedKey(plugin, "Sponge"), new ItemStack(Material.SPONGE));
 		recipe.shape("lll", "lyl", "lll");
 		recipe.setIngredient('y', Material.INK_SACK, DyeColor.YELLOW.getDyeData());
 		recipe.setIngredient('l', Material.LEAVES, Short.MAX_VALUE);
@@ -138,14 +136,14 @@ public class Recipes {
 
 	// Ice(1): shaped, 2 Snow Block vertically
 	private void shapedIce() {
-		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.ICE));
+		ShapedRecipe recipe = new ShapedRecipe(new NamespacedKey(plugin, "Ice"), new ItemStack(Material.ICE));
 		recipe.shape("o", "o").setIngredient('o', Material.SNOW_BLOCK);
 		plugin.getServer().addRecipe(recipe);
 	}
 
 	// Slimeball(1): shapeless, 1 Milk + 1 Lime Dye
 	public void shapelessSlimeball() {
-		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.SLIME_BALL));
+		ShapelessRecipe recipe = new ShapelessRecipe(new NamespacedKey(plugin, "Slime_Ball"), new ItemStack(Material.SLIME_BALL));
 		recipe.addIngredient(Material.MILK_BUCKET);
 		recipe.addIngredient(Material.INK_SACK, DyeColor.LIME.getDyeData());
 		plugin.getServer().addRecipe(recipe);
@@ -153,7 +151,7 @@ public class Recipes {
 
 	// Glowstone(1): shapeless, 1 Yellow Dye + 1 Torch + 1 Glass
 	public void shapedGlowstoneBlock() {
-		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.GLOWSTONE));
+		ShapelessRecipe recipe = new ShapelessRecipe(new NamespacedKey(plugin, "Glowstone"), new ItemStack(Material.GLOWSTONE));
 		recipe.addIngredient(Material.INK_SACK, DyeColor.YELLOW.getDyeData());
 		recipe.addIngredient(Material.TORCH);
 		recipe.addIngredient(Material.GLASS);
@@ -163,49 +161,40 @@ public class Recipes {
 	// Full Chain Armor
 	public void shapedChainArmor() {
 		// Chain Helmet
-		ShapedRecipe recipeH = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_HELMET));
+		ShapedRecipe recipeH = new ShapedRecipe(new NamespacedKey(plugin, "Chainmail_Helmet"), new ItemStack(Material.CHAINMAIL_HELMET));
 		recipeH.shape("ooo", "o o").setIngredient('o', Material.IRON_FENCE);
 		plugin.getServer().addRecipe(recipeH);
 		// Chain Chestplate
-		ShapedRecipe recipeC = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_CHESTPLATE));
+		ShapedRecipe recipeC = new ShapedRecipe(new NamespacedKey(plugin, "Chainmail_ChestPlate"), new ItemStack(Material.CHAINMAIL_CHESTPLATE));
 		recipeC.shape("o o", "ooo", "ooo").setIngredient('o', Material.IRON_FENCE);
 		plugin.getServer().addRecipe(recipeC);
 		// Chain Leggings
-		ShapedRecipe recipeL = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_LEGGINGS));
+		ShapedRecipe recipeL = new ShapedRecipe(new NamespacedKey(plugin, "Chainmail_Leggings"), new ItemStack(Material.CHAINMAIL_LEGGINGS));
 		recipeL.shape("ooo", "o o", "o o").setIngredient('o', Material.IRON_FENCE);
 		plugin.getServer().addRecipe(recipeL);
 		// Chain Boots
-		ShapedRecipe recipeB = new ShapedRecipe(new ItemStack(Material.CHAINMAIL_BOOTS));
+		ShapedRecipe recipeB = new ShapedRecipe(new NamespacedKey(plugin, "Chainmail_Boots"), new ItemStack(Material.CHAINMAIL_BOOTS));
 		recipeB.shape("o o", "o o").setIngredient('o', Material.IRON_FENCE);
 		plugin.getServer().addRecipe(recipeB);
 	}
 
 	// Lava(1): shapeless, 1 Lava Bucket
 	private void shapelessLava() {
-		ShapelessRecipe recipe =  new ShapelessRecipe(new ItemStack(Material.STATIONARY_LAVA));
+		ShapelessRecipe recipe =  new ShapelessRecipe(new NamespacedKey(plugin, "Stationary_Lava"), new ItemStack(Material.STATIONARY_LAVA));
 		recipe.addIngredient(Material.LAVA_BUCKET);
 		plugin.getServer().addRecipe(recipe);
 	}
 
 	// Water(1): shapeless, 1 Water Bucket
 	private void shapelessWater() {
-		ShapelessRecipe recipe =  new ShapelessRecipe(new ItemStack(Material.STATIONARY_WATER));
+		ShapelessRecipe recipe =  new ShapelessRecipe(new NamespacedKey(plugin, "Stationary_Water"), new ItemStack(Material.STATIONARY_WATER));
 		recipe.addIngredient(Material.WATER_BUCKET);
-		plugin.getServer().addRecipe(recipe);
-	}
-
-	// Locked Chest(2): 1 magenta wool + 1 black wool, 1 black wool + 1 magenta wool
-	private void shapedLockedChest() {
-		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.LOCKED_CHEST));
-		recipe.shape("mb", "mb");
-		recipe.setIngredient('m', Material.WOOL, DyeColor.MAGENTA.getWoolData());
-		recipe.setIngredient('b', Material.WOOL, DyeColor.BLACK.getWoolData());
 		plugin.getServer().addRecipe(recipe);
 	}
 
 	// Dyed Dead Bush(1): 1 cactus green dye + 1 dead bush
 	private void shapelessDyedDeadBush() {
-		ShapelessRecipe recipe = new ShapelessRecipe(new ItemStack(Material.LONG_GRASS, 1, (short) 3));
+		ShapelessRecipe recipe = new ShapelessRecipe(new NamespacedKey(plugin, "Long_Grass"), new ItemStack(Material.LONG_GRASS, 1, (short) 3));
 		recipe.addIngredient(Material.DEAD_BUSH);
 		recipe.addIngredient(Material.INK_SACK, 2);
 		plugin.getServer().addRecipe(recipe);
@@ -213,7 +202,7 @@ public class Recipes {
 
 	// Charcoal Block(1): 9 Charcoal
 	private void shapedCharcoalBlock() {
-		ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.COAL_BLOCK, 1, (short) 1));
+		ShapedRecipe recipe = new ShapedRecipe(new NamespacedKey(plugin, "Charcoal_Block"), new ItemStack(Material.COAL_BLOCK, 1, (short) 1));
 		recipe.shape("ccc", "ccc", "ccc");
 		recipe.setIngredient('c', Material.COAL, CoalType.CHARCOAL.getData());
 		plugin.getServer().addRecipe(recipe);
